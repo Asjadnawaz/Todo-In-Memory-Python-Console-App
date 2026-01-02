@@ -1,55 +1,47 @@
-# [PROJECT_NAME] Constitution
-<!-- Example: Spec Constitution, TaskFlow Constitution, etc. -->
+<!--
+Sync Impact Report:
+Version change: N/A → 1.0.0
+List of modified principles: N/A (new constitution)
+Added sections: All principles and sections
+Removed sections: None
+Templates requiring updates:
+- .specify/templates/plan-template.md ⚠ pending
+- .specify/templates/spec-template.md ⚠ pending
+- .specify/templates/tasks-template.md ⚠ pending
+- .specify/templates/commands/*.md ⚠ pending
+Follow-up TODOs: None
+-->
+
+# In-Memory Console-Based Todo Application Constitution
 
 ## Core Principles
 
-### [PRINCIPLE_1_NAME]
-<!-- Example: I. Library-First -->
-[PRINCIPLE_1_DESCRIPTION]
-<!-- Example: Every feature starts as a standalone library; Libraries must be self-contained, independently testable, documented; Clear purpose required - no organizational-only libraries -->
+### I. Spec-Driven Development
+Spec-first approach where all behaviors must be defined in specifications before implementation; No ad-hoc coding allowed; Each phase builds on previous phase artifacts with clear acceptance criteria.
 
-### [PRINCIPLE_2_NAME]
-<!-- Example: II. CLI Interface -->
-[PRINCIPLE_2_DESCRIPTION]
-<!-- Example: Every library exposes functionality via CLI; Text in/out protocol: stdin/args → stdout, errors → stderr; Support JSON + human-readable formats -->
+### II. Deterministic and Testable Logic
+All system behaviors must be predictable and testable from early phases; Logic must be deterministic with clear input/output contracts; Testable components with verifiable acceptance criteria required before implementation.
 
-### [PRINCIPLE_3_NAME]
-<!-- Example: III. Test-First (NON-NEGOTIABLE) -->
-[PRINCIPLE_3_DESCRIPTION]
-<!-- Example: TDD mandatory: Tests written → User approved → Tests fail → Then implement; Red-Green-Refactor cycle strictly enforced -->
+### III. Clean Separation of Concerns
+Clear architectural boundaries between components; Each phase maintains distinct responsibilities; Modular design enabling independent testing and evolution of components.
 
-### [PRINCIPLE_4_NAME]
-<!-- Example: IV. Integration Testing -->
-[PRINCIPLE_4_DESCRIPTION]
-<!-- Example: Focus areas requiring integration tests: New library contract tests, Contract changes, Inter-service communication, Shared schemas -->
+### IV. Incremental Scalability
+Design for evolution from console application to cloud-native platform; Each phase builds incrementally on the previous one; Architecture must support progression from in-memory → API-first → AI-native → containerized → event-driven.
 
-### [PRINCIPLE_5_NAME]
-<!-- Example: V. Observability, VI. Versioning & Breaking Changes, VII. Simplicity -->
-[PRINCIPLE_5_DESCRIPTION]
-<!-- Example: Text I/O ensures debuggability; Structured logging required; Or: MAJOR.MINOR.BUILD format; Or: Start simple, YAGNI principles -->
+### V. AI-Native Readiness
+System must be designed with AI integration in mind from Phase III onward; Architecture supports agent-based interactions and AI capabilities; Codebase remains explainable and auditable as AI features are added.
 
-### [PRINCIPLE_6_NAME]
+### VI. Phase-Based Architecture Constraints
 
+Phase I: Python console app with in-memory state only; Phase II: API-first with FastAPI + SQLModel; Phase III: Agent-based AI with ChatKit + Agents SDK; Phase IV: Container-first Kubernetes design; Phase V: Event-driven cloud-scalable architecture.
 
-[PRINCIPLE__DESCRIPTION]
+## Quality Standards
+Code must be readable, modular, and beginner-safe; No hard-coded data beyond initial seed examples; Clear command flows for CRUD operations; Predictable error handling and input validation; Logging and observability added progressively per phase; Security considerations documented from Phase II onward.
 
-## [SECTION_2_NAME]
-<!-- Example: Additional Constraints, Security Requirements, Performance Standards, etc. -->
-
-[SECTION_2_CONTENT]
-<!-- Example: Technology stack requirements, compliance standards, deployment policies, etc. -->
-
-## [SECTION_3_NAME]
-<!-- Example: Development Workflow, Review Process, Quality Gates, etc. -->
-
-[SECTION_3_CONTENT]
-<!-- Example: Code review requirements, testing gates, deployment approval process, etc. -->
+## Tooling and Development Workflow
+Claude Code used strictly for spec → plan → implementation; Spec-Kit Plus required for all phase transitions; No framework leakage between phases; AI features must be explainable and auditable; All changes must reference code precisely with clear command flows.
 
 ## Governance
-<!-- Example: Constitution supersedes all other practices; Amendments require documentation, approval, migration plan -->
+This constitution supersedes all other development practices; All implementations must comply with phase-based constraints; Amendments require documentation and approval following the spec-kit-plus workflow; Code reviews must verify compliance with all principles.
 
-[GOVERNANCE_RULES]
-<!-- Example: All PRs/reviews must verify compliance; Complexity must be justified; Use [GUIDANCE_FILE] for runtime development guidance -->
-
-**Version**: [CONSTITUTION_VERSION] | **Ratified**: [RATIFICATION_DATE] | **Last Amended**: [LAST_AMENDED_DATE]
-<!-- Example: Version: 2.1.1 | Ratified: 2025-06-13 | Last Amended: 2025-07-16 -->
+**Version**: 1.0.0 | **Ratified**: 2026-01-02 | **Last Amended**: 2026-01-02

@@ -1,0 +1,24 @@
+{
+  "permissions": {
+    "allow": [
+      "Skill(sp.constitution)",
+      "Bash(dir .specifyscriptsbashcreate-phr.sh)",
+      "Bash(dir .specify /s)",
+      "Bash(dir .specifyscripts /s)",
+      "Bash(dir \".specify\\\\scripts\" /s)",
+      "Bash(dir \".specify\\\\scripts\\\\powershell\")",
+      "Bash(if not exist \"history\\\\prompts\\\\constitution\" mkdir \"history\\\\prompts\\\\constitution\")",
+      "Bash(mkdir -p history/prompts/constitution)",
+      "Bash(git fetch --all --prune)",
+      "Bash(powershell -ExecutionPolicy Bypass -File:*)",
+      "Bash(dir \"specs/001-console-todo-app/checklists\" /s)",
+      "Bash(git rev-parse --git-dir)",
+      "Bash(python -m src.todo_app --help)",
+      "Bash(python -c \"from src.todo_app.cli import TodoAppCLI; print\\(''Application structure is correct and importable''\\)\")",
+      "Bash(py -c \"from src.todo_app.cli import TodoAppCLI; print\\(''Application structure is correct and importable''\\)\")",
+      "Bash(python3 -c \"from src.todo_app.cli import TodoAppCLI; print\\(''Application structure is correct and importable''\\)\")",
+      "Bash(powershell Get-ChildItem)",
+      "Bash(python test_app.py)"
+    ]
+  }
+}
