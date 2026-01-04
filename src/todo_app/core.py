@@ -4,7 +4,7 @@ Handles all operations related to todo items with validation
 """
 
 from typing import List, Optional
-from todo_app.models import TodoList, TodoItem
+from .models import TodoList, TodoItem
 
 
 class TodoService:

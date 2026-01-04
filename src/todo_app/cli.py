@@ -6,7 +6,7 @@ Handles user input and output, menu display, and command routing
 from typing import Optional
 import signal
 import sys
-from todo_app.core import TodoService
+from .core import TodoService
 
 
 class TodoAppCLI:
